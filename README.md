@@ -1,20 +1,6 @@
-# readme-generator
-a professional README generator
 
-    ## ${name}
-        ${github}
+# projectTitle
 
-    ## Created by
-    ${createdBy}
-
-    ## Description
-    ${description}
-    
-    ## Screenshots
-    ${screenshots}
-
-    ## Deployed link
-    ${deployedLink}
-    
-    ## Created with
-    ${createdWith}
+## Made by
+dave
+<a href="https://github.com/davevebber">Github Profile</a>
