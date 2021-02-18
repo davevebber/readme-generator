@@ -1,11 +1,15 @@
+const inquirer = require('inquirer');
 const fs = require('fs');
 const generatePage = require('./src/page-template');
 
-const readMeDataArgs = process.argv.slice(2, process.argv.length);
-const [name, github] = readMeDataArgs;
-
-  fs.writeFile('README.md', generatePage(name, github), err => {
-    if (err) throw err;
+const promptUser = () => {
+    return inquirer.prompt([
+      {
+        type: 'input',
+        name: 'name',
+        message: 'What is your name?'
+      }
+    ]);
+  };
   
-    console.log('README complete! Check out README.md to see the output!');
-  });
+  promptUser().then(answers => console.log(answers));
