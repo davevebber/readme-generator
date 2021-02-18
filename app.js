@@ -29,26 +29,10 @@ const promptUser = () => {
           return false;
         }
       }
-    }
-  ]);
-};
-
-const promptProject = portfolioData => {
-  console.log(`
-=================
-Add a New Project
-=================
-`);
-
-  // If there's no 'projects' array property, create one
-  if (!portfolioData.projects) {
-    portfolioData.projects = [];
-  }
-  return inquirer
-    .prompt([
-      {
+    },
+    {
         type: 'input',
-        name: 'name',
+        name: 'projectName',
         message: 'What is the name of your project? (Required)',
         validate: nameInput => {
           if (nameInput) {
@@ -103,32 +87,15 @@ Add a New Project
             return false;
           }
         }
-      },
-      {
-        type: 'confirm',
-        name: 'confirmAddProject',
-        message: 'Would you like to enter another project?',
-        default: false
       }
-    ])
-    .then(projectData => {
-      portfolioData.projects.push(projectData);
-      if (projectData.confirmAddProject) {
-        return promptProject(portfolioData);
-      } else {
-        return portfolioData;
-      }
-    });
+  ]);
 };
 
 promptUser()
-  .then(promptProject)
   .then(portfolioData => {
-    console.log(portfolioData);
-  
-    // const pageHTML = generatePage(portfolioData);
-    // fs.writeFile('./index.html', pageHTML, err => {
-    //   if (err) throw new Error(err);
-    //   console.log('Page created! Check out index.html in this directory to see it!');
-    // });
+    const pageHTML = generatePage(portfolioData);
+
+    fs.writeFile('./README.md', pageHTML, err => {
+      if (err) throw new Error(err);
+    });
   });
