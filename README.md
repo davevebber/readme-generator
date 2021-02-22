@@ -3,38 +3,26 @@
 
 # Table of contents
 1. [Created-By](#created-by)
-2. [Contributions](#contributions)
-3. [Description](#description)
-4. [Created-With](#created-with)
-5. [Usage-Information](#usage)
-6. [Test-Instructions](#test-instructions)
-7. [Installation](#install)
-8. [Deployed-Link](#deployed-link)
-9. [Screenshots](#screenshots)
-10. [Questions](#questions)
+2. [Description](#description)
+3. [Created-With](#created-with)
+4. [Usage-Information](#usage)
+5. [Deployed-Link](#deployed-link)
+6. [Screenshots](#screenshots)
+7. [Questions](#questions)
 
 ## Created By <a name="created-by"></a>
-Dave Vebber
+David Vebber
 www.github.com/davevebber
 
-## Contributions <a name="contributions"></a>
-
-
 ## Description <a name="description"></a>
-This app creates a quality README based on user input. 
+This app creates a quality README based on user input.
 
 ## Created With <a name="created-with"></a>
 JavaScript
 Node
 
 ## Usage Information <a name="usage"></a>
-
-
-## Test Instructions <a name="test-instructions"></a>
-
-
-## Installation <a name="install"></a>
-
+To use this app run "node app.js" in the command line and follow the prompts. The app will generate a README.md based on your input.
 
 ## Deployed Link <a name="deployed-link"></a>
 https://davevebber.github.io/readme-generator/
@@ -44,5 +32,5 @@ https://davevebber.github.io/readme-generator/
 
 ## Questions <a name="questions"></a>
 If you have any other questions please contact me at:
-davevebber@gmail.com
+davevebber@gmail.com 
 www.github.com/davevebber
